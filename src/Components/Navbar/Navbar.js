@@ -6,7 +6,7 @@ import logo from './assets/Group 1.svg'
 export const  Navbar=()=> {
   const [isOpen, setIsOpen] = useState(false);
   return (
-      <nav className="bg-[#242424]">
+      <nav className="bg-[#242424] sticky">
         <div className="max-w-8xl mx-auto py-5 px-5 sm:px-6 md:pl-10">
           <div className="flex items-center justify-between h-10">
             <div className="flex items-center">
