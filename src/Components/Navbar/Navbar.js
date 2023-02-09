@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import './Navbar.module.css'
 import { Transition } from "@headlessui/react";
 import logo from './assets/Group 1.svg'
-
 export const  Navbar=()=> {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -32,7 +31,7 @@ export const  Navbar=()=> {
                     href="#"
                     className="text[#242424] lg:pl-8 py-2 text-sm font-medium"
                   >
-                    <button className="bg-[#FAF3E5] px-5 py-3">SignUp</button>
+                    <button className="bg-[#f4f4f4] px-5 py-3">SignUp</button>
                   </a>
                 </div>
               </div>
@@ -86,12 +85,12 @@ export const  Navbar=()=> {
 
         <Transition
           show={isOpen}
-          enter="transition ease-out duration-100 transform"
+          enter="transition ease-in duration-100 transform"
           enterFrom="opacity-0 scale-100"
           enterTo="opacity-100 scale-100"
           leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
+          leaveTo="opacity-0 scale-100"
         >
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
@@ -106,7 +105,7 @@ export const  Navbar=()=> {
                   href="#"
                   className="text-white  hover:text-white block px-3 py-2 text-base font-medium"
                 >
-                  SignUp
+                  <button className="bg-[#f4f4f4] text-[#242424] px-5 py-3">SignUp</button>
                 </a>
               </div>
             </div>
