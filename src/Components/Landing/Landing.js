@@ -24,16 +24,14 @@ export const Landing = () => {
                 <img src={locateme} className='md:block hidden w-25'/>
             </button>
             {/* .. */}
-            <a>
               <button className='md:block hidden w-2/4 bg-[#FA144B] pl-6 pr-6 text-[13px] text-white font-bold '>
-                FIND FOOD
+                <a>FIND FOOD</a>
               </button>
-            </a>
           </div>
           <div className='md:hidden block mt-10 text-center'>
-          <button className='w-2/4 bg-[#FA144B] mx-auto py-3 text-[13px] text-white font-bold '>
-                FIND FOOD
-          </button>
+              <button className='w-2/4 bg-[#FA144B] mx-auto py-3 text-[13px] text-white font-bold '>
+                <a>FIND FOOD</a>
+              </button>
           </div>
           
        </div>
