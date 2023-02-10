@@ -9,24 +9,29 @@ export const Landing = () => {
   return (
     <>
     <div className='flex'>
-       <div className='py-12 md:my-12 my-5 lg:px-5 px-3 md:mx-3 mx-2.5 md:text-left text-center'>
+       <div className='py-12 md:my-12 my-5 lg:px-5 px-3 md:mx-3 mx-auto md:text-left text-center'>
           <div className='text-[#242424] md:text-[40px] text-[35px] font-bold mt-12 pt-5'>Meals on Tips?</div>
           <div className='text-[#727070] md:text-[25px] text-[18px] font-regular '>Order food from Java to your hostel.</div>
-          <div className='flex mt-10 font-medium md:text-[15px]'>
-            <textarea placeholder='Enter your delivery location' className='resize-none w-full pt-6 md:pt-5 pl-5'>
+          <div className='flex mt-10 font-medium md:text-[13px] text-[10px]'>
 
-            </textarea>
-            <button className='bg-white w-1/2 text-white text-[13px] px-3 pb-1'>
+            {/* need for backend */}
+            <input placeholder='Enter your delivery location' className='resize-none w-full py-4 md:pt-5 pl-5'>
+            </input>
+            {/* .. */}
+            {/* integrate google map gps */}
+            <button className='bg-white w-1/2 text-white text-[13px] px-3'> 
                 <img src={locateme} className='md:hidden block w-20'/>
                 <img src={locateme} className='md:block hidden w-25'/>
             </button>
-            <button className='md:block hidden w-2/4 bg-[#FA144B] pl-6 pr-8 text-[13px] text-white font-bold '>
+            {/* .. */}
+            <a>
+              <button className='md:block hidden w-2/4 bg-[#FA144B] pl-6 pr-6 text-[13px] text-white font-bold '>
                 FIND FOOD
-            </button>
-            
+              </button>
+            </a>
           </div>
           <div className='md:hidden block mt-10 text-center'>
-          <button className='w-2/4 bg-[#FA144B] mx-auto pl-6 pr-8 py-3 text-[13px] text-white font-bold '>
+          <button className='w-2/4 bg-[#FA144B] mx-auto py-3 text-[13px] text-white font-bold '>
                 FIND FOOD
           </button>
           </div>
@@ -38,7 +43,7 @@ export const Landing = () => {
           <img src={main2} className='xl:hidden md:block hidden'/>
        </div>
     </div>
-    <div className='lg:block hidden mt-12 pt-8'>
+    <div className='lg:block hidden mt-12 pt-10'>
         <img src={progress} className=''/>
     </div>
     </>
