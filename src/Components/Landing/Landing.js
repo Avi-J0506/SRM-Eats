@@ -2,8 +2,9 @@ import React from 'react'
 import './Landing.module.css'
 import main from './assets/main.svg'
 import main2 from './assets/main2.svg'
-import locateme from './assets/Group 8.svg'
+// import locateme from './assets/Group 8.svg'
 import progress from './assets/Group 9.svg'
+import Dropdown from '../Dropdown/dropdown'
 
 export const Landing = () => {
   return (
@@ -17,12 +18,13 @@ export const Landing = () => {
             {/* need for backend */}
             <input placeholder='Enter your delivery location' className='resize-none w-full py-4 md:pt-5 pl-5'>
             </input>
+            <Dropdown/>
             {/* .. */}
             {/* integrate google map gps */}
-            <button className='bg-white w-1/2 text-white text-[13px] px-3'> 
+            {/* <button className='bg-white w-1/2 text-white text-[13px] px-3'> 
                 <img src={locateme} className='md:hidden block w-20'/>
                 <img src={locateme} className='md:block hidden w-25'/>
-            </button>
+            </button> */}
             {/* .. */}
               <button className='md:block hidden w-2/4 bg-[#FA144B] pl-6 pr-6 text-[13px] text-white font-bold '>
                 <a>FIND FOOD</a>
