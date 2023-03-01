@@ -8,9 +8,9 @@ function classNames(...classes) {
 
 export default function Dropdown() {
   return (
-    <Menu as="div" className="relative inline-block text-left w-full">
+    <Menu as="div" className="relative inline-block text-left w-full border border-[#FA144B] border-[1px]">
       <div>
-        <Menu.Button className="inline-flex w-full py-4  px-4 md:pt-5 border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
+        <Menu.Button className="inline-flex w-full py-4  px-4 md:pt-5 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
           Enter Your Delivery Location
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
         </Menu.Button>
