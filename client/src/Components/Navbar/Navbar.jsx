@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 import './Navbar.module.css'
 import { Transition } from "@headlessui/react";
 import logo from './assets/Group 1.svg'
@@ -12,7 +13,7 @@ export const  Navbar=()=> {
         <div className="max-w-8xl mx-auto py-5 px-5 sm:px-6 md:pl-10">
           <div className="flex items-center justify-between h-10">
             <div className="flex items-center">
-              <div className="flex-shrink-0">
+              <Link to='/' className="flex-shrink-0">
                 <img
                   className="md:block hidden w-25 h-25"
                   src={logo}
@@ -21,21 +22,21 @@ export const  Navbar=()=> {
                   className="md:hidden block w-20 h-20"
                   src={logo}
                 />
-              </div>
+              </Link>
               <div className="hidden md:block absolute right-0 mr-10">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <a
-                    href="#"
+                  <Link
+                    to="/Auth"
                     className=" text-white px-3 py-2 text-sm font-medium"
                   >
                     Login
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    href="/Auth"
                     className="text[#242424] lg:pl-8 py-2 text-sm font-medium"
                   >
                     <button className="bg-[#FAF3E5] px-5 py-3">SignUp</button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -56,18 +57,18 @@ export const  Navbar=()=> {
           {(ref) => (
             <div className="md:hidden bg-[#242424]" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 text-center sm:px-3">
-                <a
-                  href="#"
+                <Link
+                  to="/Auth"
                   className="text-white  text-white block px-3 py-2 font-medium"
                 >
                   Login
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="/Auth"
                   className="text-white  hover:text-white block px-3 py-2 font-medium"
                 >
                 <button className="bg-[#FAF3E5] text-[#242424] px-5 py-3">SignUp</button>
-                </a>
+                </Link>
               </div>
             </div>
           )}
