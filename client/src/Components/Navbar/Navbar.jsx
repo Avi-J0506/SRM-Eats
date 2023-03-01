@@ -16,11 +16,7 @@ export const  Navbar=()=> {
             <div className="flex items-center">
               <Link to='/' className="flex-shrink-0">
                 <img
-                  className="md:block hidden w-25 h-25"
-                  src={logo}
-                />
-                <img
-                  className="md:hidden block w-20 h-20"
+                  className="w-20 h-20"
                   src={logo}
                 />
               </Link>
