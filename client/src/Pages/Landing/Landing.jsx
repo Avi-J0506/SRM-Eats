@@ -4,6 +4,7 @@ import './Landing.module.css'
 import main from './assets/main.svg'
 import main2 from './assets/main2.svg'
 import progress from './assets/Group 9.svg'
+import carousel1 from './assets/carousel1.svg'
 import Dropdown from '../../Components/Dropdown/dropdown'
 
 export const Landing = () => {
@@ -38,7 +39,13 @@ export const Landing = () => {
        </div>
     </div>
     <div className='lg:block hidden mt-12 pt-10'>
-        <img src={progress} className=''/>
+        <img src={progress}/>
+    </div>
+    <div className='slider lg:hidden block mt-10 py-12 bg-[#242424] text-white text-center justify-center'>
+        <div id='img'>
+        <img src={carousel1} className='mx-auto'/>
+        <p className='pt-5'>Select Food</p>
+        </div>
     </div>
     </>
   )

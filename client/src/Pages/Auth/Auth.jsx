@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import './Auth.module.css'
 const Auth = () => {
  const [isLogin, setisLogin] = useState(true);
  const handleSwitch = () =>{
