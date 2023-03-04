@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
 import './Landing.module.css'
 import main from './assets/main.svg'
@@ -7,8 +7,7 @@ import progress from './assets/Group 9.svg'
 import carousel1 from './assets/carousel1.svg'
 import Dropdown from '../../Components/Dropdown/dropdown'
 
-export const Landing = () => {
-  const [isLogin, setisLogin] = useState(false);
+export const Landing = (props) => {
   return (
     <>
     <div className='flex'>
@@ -19,14 +18,14 @@ export const Landing = () => {
             <Dropdown/>
               <button className='md:block hidden w-2/4 bg-[#FA144B] pl-6 pr-6 text-[13px] text-white font-bold '>
                {
-                isLogin?<Link to='/Home'>FIND FOOD</Link>:<Link to='/Auth'>FIND FOOD</Link>
+                props.state?<Link to='/Home'>FIND FOOD</Link>:<Link to='/Auth'>FIND FOOD</Link>
                }
               </button>
           </div>
           <div className='md:hidden block mt-10 text-center'>
               <button className='w-2/4 bg-[#FA144B] mx-auto py-3 text-[13px] text-white font-bold '>
               {
-                isLogin?<Link to='/Home'>FIND FOOD</Link>:<Link to='/Auth'>FIND FOOD</Link>
+                props.state?<Link to='/Home'>FIND FOOD</Link>:<Link to='/Auth'>FIND FOOD</Link>
                }
               </button>
           </div>

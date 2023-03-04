@@ -5,11 +5,11 @@ import {Landing} from './Pages/Landing/Landing'
 import Home from './Pages/Home/Home'
 import Auth from './Pages/Auth/Auth'
 
-const AllRoutes = () => {
+const AllRoutes = (props) => {
   return (
     <>
     <Routes>
-        <Route path='/' element={<Landing/>}/>
+        <Route path='/' element={<Landing state={props.state}/>}/>
         <Route path='/Home' element={<Home/>}/>
         <Route path='/Auth' element={<Auth/>}/>
     </Routes>
