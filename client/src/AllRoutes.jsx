@@ -11,7 +11,7 @@ const AllRoutes = (props) => {
     <Routes>
         <Route path='/' element={<Landing state={props.state}/>}/>
         <Route path='/Home' element={<Home/>}/>
-        <Route path='/Auth' element={<Auth/>}/>
+        <Route path='/Auth' element={<Auth state={props.state}/>}/>
     </Routes>
     </>
   )

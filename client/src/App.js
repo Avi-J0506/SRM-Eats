@@ -5,12 +5,12 @@ import { Navbar } from './Components/Navbar/Navbar';
 import { Footer } from './Components/Footer/Footer';
 import AllRoutes from './AllRoutes.jsx'
 function App() {
-  const [isLogin, setisLogin] = useState(true);
+  const [isLogin, setisLogin] = useState(false);
   return (
     <div className="App">
       <Router>
         <Navbar state={isLogin}/>
-          <AllRoutes state={isLogin}/>
+          <AllRoutes state={isLogin} setstate={setisLogin}/>
         <Footer/>
       </Router>
     </div>
