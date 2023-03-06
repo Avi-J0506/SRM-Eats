@@ -8,7 +8,7 @@ function classNames(...classes) {
 
 export default function Dropdown() {
   return (
-    <Menu as="div" className="relative inline-block text-left w-full border border-[#FA144B] border-[1px]">
+    <Menu as="div" className="relative inline-block text-left w-full border border-[#FA144B] border-[1px]" id='select_box'>
       <div>
         <Menu.Button className="inline-flex w-full py-4  px-4 md:pt-5 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
           Enter Your Delivery Location
@@ -27,7 +27,7 @@ export default function Dropdown() {
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-full origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
-            <Menu.Item>
+            <Menu.Item value='1'>
               {({ active }) => (
                 <a
                   href="#"
@@ -40,7 +40,7 @@ export default function Dropdown() {
                 </a>
               )}
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item value='2'>
               {({ active }) => (
                 <a
                   href="#"
@@ -53,7 +53,7 @@ export default function Dropdown() {
                 </a>
               )}
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item value='3'>
               {({ active }) => (
                 <a
                   href="#"
@@ -67,7 +67,7 @@ export default function Dropdown() {
               )}
             </Menu.Item>
             <form method="POST" action="#">
-              <Menu.Item>
+              <Menu.Item value='4'>
                 {({ active }) => (
                   <button
                     type="submit"

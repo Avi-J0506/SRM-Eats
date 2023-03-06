@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import './Navbar.module.css'
 import { Transition } from "@headlessui/react";
 import logo from './assets/Group 1.svg'
+import cart from './assets/material-symbols_shopping-cart-outline.svg'
 import {Turn as Hamburger} from 'hamburger-react'
 
 export const  Navbar=(props)=> {
@@ -21,13 +22,27 @@ export const  Navbar=(props)=> {
               <div className="hidden md:block absolute right-0 mr-10">
                 <div className="ml-10 flex items-baseline space-x-4">
                     {!props.state && <Link to="/Auth" className=" text-white px-3 py-2 text-sm font-medium">Login</Link>}
-                    {props.state && <Link to="/Cart" className="text-white">Cart</Link>}
+                    {props.state && 
+                    <Link to="/Cart" className="text-white">
+                      <div className="flex space-x-2">
+                        <img src={cart}/>
+                        <span>Cart</span>
+                      </div>
+                    </Link>}
                 </div>
               </div>
             </div>
+            { !props.state &&
             <div className="md:hidden">
               <Hamburger toggled={isOpen} toggle={setOpen} size={25} color="#fff" duration={0.5} rounded />
             </div>
+            }
+            {
+              props.state && 
+              <Link to='/Cart'>
+              <img src={cart} className='md:hidden block'/>
+              </Link>
+            }
           </div>
         </div>
 
