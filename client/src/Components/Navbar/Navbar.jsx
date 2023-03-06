@@ -42,18 +42,13 @@ export const  Navbar=(props)=> {
           {(ref) => (
             <div className="md:hidden bg-[#242424]" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 text-center sm:px-3">
-                <Link
+                {!props.state && <Link
                   to="/Auth"
                   className="text-white  text-white block px-3 py-2 font-medium"
                 >
                   Login
-                </Link>
-                <Link
-                  to="/Auth"
-                  className="text-white  hover:text-white block px-3 py-2 font-medium"
-                >
-                <button className="bg-[#FAF3E5] text-[#242424] px-5 py-3">SignUp</button>
-                </Link>
+                </Link>}
+                {props.state && <Link to="/Cart" className="text-white">Cart</Link>}
               </div>
             </div>
           )}

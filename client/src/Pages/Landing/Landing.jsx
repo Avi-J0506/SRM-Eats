@@ -13,7 +13,7 @@ export const Landing = (props) => {
     <div className='flex'>
        <div className='py-12 md:my-12 my-5 lg:px-5 px-3 md:mx-3 mx-auto md:text-left text-center'>
           <div className='text-[#242424] md:text-[40px] text-[35px] font-bold mt-12 pt-5'>Meals on Tips?</div>
-          <div className='text-[#727070] md:text-[25px] text-[18px] font-regular '>Order food from Java to your hostel.</div>
+          <div className='text-[#727070] md:text-[25px] text-[18px] font-regular '>Order food from Java to your hostel</div>
           <div className='flex mt-10 font-medium md:text-[13px] text-[10px]'>
             <Dropdown/>
               <button className='md:block hidden w-2/4 bg-[#FA144B] pl-6 pr-6 text-[13px] text-white font-bold '>
