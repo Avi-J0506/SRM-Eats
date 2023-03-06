@@ -6,7 +6,7 @@ import img from './assets/img.svg'
 
 const Cart = () => {
   return (
-    <div className='text-center items-center justify-center my-[20vh]'>
+    <div className='text-center items-center justify-center mt-[13vh] mb-[25vh]'>
       <div>
         <img src={img} className='mx-auto' />
       </div>

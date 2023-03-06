@@ -11,7 +11,7 @@ export default function Dropdown() {
     <Menu as="div" className="relative inline-block text-left w-full border border-[#FA144B] border-[1px]" id='select_box'>
       <div>
         <Menu.Button className="inline-flex w-full py-4  px-4 md:pt-5 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
-          Enter Your Delivery Location
+          Enter your Delivery Location
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
         </Menu.Button>
       </div>
@@ -27,7 +27,7 @@ export default function Dropdown() {
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-full origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
-            <Menu.Item value='1'>
+            <Menu.Item>
               {({ active }) => (
                 <a
                   href="#"
@@ -40,7 +40,7 @@ export default function Dropdown() {
                 </a>
               )}
             </Menu.Item>
-            <Menu.Item value='2'>
+            <Menu.Item>
               {({ active }) => (
                 <a
                   href="#"
@@ -53,7 +53,7 @@ export default function Dropdown() {
                 </a>
               )}
             </Menu.Item>
-            <Menu.Item value='3'>
+            <Menu.Item>
               {({ active }) => (
                 <a
                   href="#"
@@ -66,8 +66,7 @@ export default function Dropdown() {
                 </a>
               )}
             </Menu.Item>
-            <form method="POST" action="#">
-              <Menu.Item value='4'>
+              <Menu.Item>
                 {({ active }) => (
                   <button
                     type="submit"
@@ -80,7 +79,6 @@ export default function Dropdown() {
                   </button>
                 )}
               </Menu.Item>
-            </form>
           </div>
         </Menu.Items>
       </Transition>

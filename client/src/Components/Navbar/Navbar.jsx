@@ -19,6 +19,11 @@ export const  Navbar=(props)=> {
                   src={logo}
                 />
               </Link>
+              {/* write condition for selected dropdown value */}
+              <div className="mx-7 text-white">
+               {}
+              </div>
+              {/* // */}
               <div className="hidden md:block absolute right-0 mr-10">
                 <div className="ml-10 flex items-baseline space-x-4">
                     {!props.state && <Link to="/Auth" className=" text-white px-3 py-2 text-sm font-medium">Login</Link>}
