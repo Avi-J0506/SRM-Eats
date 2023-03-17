@@ -10,7 +10,7 @@ export default function Dropdown() {
   return (
     <Menu as="div" className="relative inline-block text-left w-full border border-[#FA144B] border-[1px]" id='select_box'>
       <div>
-        <Menu.Button className="inline-flex w-full py-4  px-4 md:pt-5 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
+        <Menu.Button className="inline-flex w-full justify-between py-4  px-4 md:pt-5 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
           Enter your Delivery Location
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
         </Menu.Button>

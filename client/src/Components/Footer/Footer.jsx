@@ -7,7 +7,7 @@ import logo from './assets/Group 1.svg'
 export const Footer = () => {
   return (
     
-<footer className="p-4 bg-[#383838] sm:p-6">
+<footer className="p-4 bg-[#242424] sm:p-6">
     <div className="md:flex py-[50px] md:justify-between">
         <div className="mb-6 md:mb-0 mx-[100px]">
             <Link to="/" className="flex items-center">

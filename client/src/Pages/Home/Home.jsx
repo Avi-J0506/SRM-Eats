@@ -15,7 +15,7 @@ const Home = () => {
     });
   }
   return (
-    <div className='my-10 mx-20'>
+    <div className='bg-[#ffffff] py-10 px-20'>
       <nav className='flex space-x-[100px] justify-between'>
         <h3 className='md:text-[25px] text-[20px] font-medium'>Restaurants Nearby</h3>
         {/* search */}
