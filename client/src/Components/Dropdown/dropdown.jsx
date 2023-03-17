@@ -8,9 +8,9 @@ function classNames(...classes) {
 
 export default function Dropdown() {
   return (
-    <Menu as="div" className="relative inline-block text-left w-full border border-[#FA144B] border-[1px]" id='select_box'>
+    <Menu as="div" className="relative inline-block text-left w-full" id='select_box'>
       <div>
-        <Menu.Button className="inline-flex w-full justify-between py-4  px-4 md:pt-5 bg-white text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
+        <Menu.Button className="inline-flex w-full justify-between py-4  px-4 md:pt-5 bg-white text-sm font-medium text-gray-700 shadow-sm ">
           Enter your Delivery Location
           <ChevronDownIcon className="-mr-1 ml-2 h-5 w-5" aria-hidden="true" />
         </Menu.Button>
@@ -25,7 +25,7 @@ export default function Dropdown() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-full origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 z-10 w-full origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             <Menu.Item>
               {({ active }) => (
