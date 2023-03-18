@@ -19,7 +19,7 @@ const ShopMenu = () => {
 
   return (
     <div className='bg-[#ffffff]'>
-        <div className='shop-name bg-[#383838] h-[20vh] w-screen text-white items-center py-12 px-12 text-[40px] font-[500] h-[30vh]'>Butty Food Corner</div>
+        <div className='shop-name bg-[#383838] h-[20vh] w-screen text-white items-center my-auto py-12 px-12 text-[40px] font-[500] h-[30vh]'>Butty Food Corner</div>
         <div className='main-menu bg-[#F3F3F3] py-12 px-12'>
             <div className='menu-bar flex justify-between'>
                 <h2 className='text-[18px] font-[700] text-[#EB0029]'>OUR MENU</h2>
@@ -37,7 +37,7 @@ const ShopMenu = () => {
                           <p className='font-regular py-3'>Rs.70</p>
                         </div>
                         <div className=' px-3'>
-                          <img src={sandwich} alt='foodimg'/>
+                          <img src={sandwich} className='lg:w-[15vw] w-[30vw]' alt='foodimg'/>
                         </div>
                     </div>
                     <hr/>
