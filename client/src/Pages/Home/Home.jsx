@@ -1,19 +1,9 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './Home.module.css'
 
 import card from './assets/card1.svg'
 const Home = () => {
-  const search = document.getElementById('search');
-  let shops = [];
-  if(search){
-    search.addEventListener('keyup',(e)=>{
-      const searchString= e.target.value;
-      const filteredShops = shops.filter(character => {
-        return character.name.includes(searchString);
-      })
-      console.log(filteredShops);
-    });
-  }
   return (
     <div className='bg-[#ffffff] py-10 px-20'>
       <nav className='flex space-x-[100px] justify-between'>
@@ -38,17 +28,17 @@ const Home = () => {
       <hr className='my-5'/>
       {/* shops*/}
       <div className='md:flex mb-20 pt-[25px] md:space-y-0 space-y-10 justify-between'>
-          <div className='card md:max-w-[18vw]'>
+          <Link type='button' to='/ShopMenu' className='shop-card md:max-w-[18vw] px-3 pt-5 pb-10 hover:shadow-lg'>
               <div>
-                <img src={card} className='w-full'/>
-                <p className='text-black text-[14px] mt-4 mb-2 font-medium'>Butty Food Corner</p>
+                <img src={card} className='w-full' alt='shopimg'/>
+                <p className='shop-name text-black text-[14px] mt-4 mb-2 font-medium' id='shop-name'>Butty Food Corner</p>
               </div>
               <div className='flex justify-between text-[12px] mb-4'>
-                  <p className='text-[#727070]'>North Indian, South Indian</p>
-                  <p className='font-medium'>from ₹40</p>
+                  <p className='shop-category text-[#727070]' id='shop-category'>North Indian, South Indian</p>
+                  <p className='shop-prices font-medium' id='shop-prices'>from ₹40</p>
               </div>
               <hr/>
-          </div>
+          </Link>
         {/* // */}
       </div>
     </div>

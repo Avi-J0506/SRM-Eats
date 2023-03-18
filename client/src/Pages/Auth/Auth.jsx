@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import './Auth.module.css'
 const Auth = (props) => {
 
