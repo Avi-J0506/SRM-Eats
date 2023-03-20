@@ -7,6 +7,7 @@ import carousel1 from './assets/carousel1.svg'
 import Dropdown from '../../Components/Dropdown/dropdown'
 
 export const Landing = (props) => {
+  
   return (
     <>
     <div className='flex mx-5'>
@@ -14,7 +15,7 @@ export const Landing = (props) => {
           <div className='text-[#ffffff] md:text-[40px] text-[35px] font-bold mt-12 pt-5'>Meals on Tips?</div>
           <div className='text-[#ffffff] md:text-[25px] text-[18px] font-regular '>Order food from Java to your hostel</div>
           <div className='flex mt-10 font-medium md:text-[13px] text-[10px]'>
-            <Dropdown handleClick={props.handleClick}/>
+            <Dropdown handleChange={props.handleChange} selectedValue={props.selectedValue}/>
               <button className='md:block hidden w-1/3 bg-[#FA144B] pl-6 pr-6 text-[13px] text-white font-bold '>
                {
                 props.state?<Link to='/Home'>ORDER FOOD</Link>:<Link to='/Auth'>ORDER FOOD</Link>

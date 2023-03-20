@@ -11,18 +11,22 @@ export const  Navbar=(props)=> {
   return (
       <nav className="bg-[#242424] sticky border-y border-t-0 border-[#FA144B]">
         <div className="max-w-[98vw] mx-auto py-5 px-5 sm:px-6 md:pl-10">
-          <div className="flex items-center justify-between h-10">
+          <div className="flex items-center justify-between h-14">
             <div className="flex items-center">
-              <Link to='/' className="flex-shrink-0">
+              <Link to='/' className="">
                 <img
-                  className="w-20 h-20"
+                  className="md:w-[9vw] w-[20vw]"
                   src={logo}
                 />
               </Link>
               {/* write condition for selected dropdown value */}
-              <div className="mx-7 text-white">
-               {}
-              </div>
+              {
+                props.selectedValue &&
+                  <div className="mx-7 text-white">
+                  {props.selectedValue}
+                  </div>
+              }
+              
               {/* // */}
               <div className="hidden md:block absolute right-0 mr-10">
                 <div className="ml-10 flex items-baseline space-x-4">
