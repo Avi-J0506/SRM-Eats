@@ -4,6 +4,7 @@ import './Navbar.module.css'
 import { Transition } from "@headlessui/react";
 import logo from './assets/Group 1.svg'
 import cart from './assets/material-symbols_shopping-cart-outline.svg'
+import location from './assets/locationico.svg'
 import {Turn as Hamburger} from 'hamburger-react'
 
 export const  Navbar=(props)=> {
@@ -17,13 +18,15 @@ export const  Navbar=(props)=> {
                 <img
                   className="md:w-[9vw] w-[20vw]"
                   src={logo}
+                  alt='logo'
                 />
               </Link>
-              {/* write condition for selected dropdown value */}
+              {/*condition for selected dropdown value */}
               {
                 props.selectedValue &&
-                  <div className="mx-7 text-white">
-                  {props.selectedValue}
+                  <div className="mx-7 flex space-x-2 text-white">
+                    <img src={location} alt='location'/>
+                    <p>{props.selectedValue}</p>
                   </div>
               }
               
@@ -34,7 +37,7 @@ export const  Navbar=(props)=> {
                     {props.state && 
                     <Link to="/Cart" className="text-white">
                       <div className="flex space-x-2">
-                        <img src={cart}/>
+                        <img src={cart} alt='cart'/>
                         <span>Cart</span>
                       </div>
                     </Link>}
@@ -49,7 +52,7 @@ export const  Navbar=(props)=> {
             {
               props.state && 
               <Link to='/Cart'>
-              <img src={cart} className='md:hidden block'/>
+              <img src={cart} className='md:hidden block' alt="cart" />
               </Link>
             }
           </div>

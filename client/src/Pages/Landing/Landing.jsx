@@ -33,15 +33,15 @@ export const Landing = (props) => {
        </div>
        {/* image */}
        <div className='lg:block hidden absolute right-0 max-w-[50vw]'>
-          <img src={main} className=''/>
+          <img src={main} alt='mainimg'/>
        </div>
     </div>
     <div className='lg:block hidden mt-12 h-full pt-10'>
-        <img src={progress}/>
+        <img src={progress} alt='progressimg'/>
     </div>
     <div className='slider lg:hidden block mt-10 py-12 bg-[#383838] text-white text-center justify-center'>
         <div id='img'>
-        <img src={carousel1} className='mx-auto'/>
+        <img src={carousel1} className='mx-auto' alt='progressimg'/>
         <p className='pt-5'>Select Food</p>
         </div>
     </div>
