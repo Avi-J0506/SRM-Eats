@@ -14,7 +14,7 @@ const Auth = (props) => {
           <div className='form-card rounded-lg my-3 py-3'>
           <form>
             <label htmlFor='number'>
-              <input type='number' name='number' id='number' placeholder='Phone Number' className='border border-[#BABFC4] min-w-[90%] h-[50px] p-3 text-[13px]' required/>
+              <input type='text' title="Error Message" pattern="[1-9]{1}[0-9]{9}" autocomplete='off' maxLength="10" name="country_code" id='number' placeholder='Phone Number' className='border border-[#BABFC4] min-w-[90%] h-[50px] p-3 text-[13px]' required/>
             </label>
             <div className='mb-10'>
             <button type='submit' className='auth-btn bg-[#FA144B] mt-5 text-white text-[12px] py-3 min-w-[90%]'>

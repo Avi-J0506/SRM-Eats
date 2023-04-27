@@ -16,8 +16,14 @@ const ShopMenu = () => {
   const increase =()=>{
       setCounter(count => count + 1);
   }
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
 
   return (
+    
     <div className='bg-[#ffffff]'>
         <div className='shop-name bg-[#383838] h-[20vh] w-screen text-white items-center my-auto py-12 px-12 text-[40px] font-[500] h-[30vh]'>Butty Food Corner</div>
         <div className='main-menu bg-[#F3F3F3] py-12 px-12'>
@@ -26,7 +32,7 @@ const ShopMenu = () => {
                 {/* vegfilter */}
                 <div className='font-regular text-[15px]'>
                   <label>Veg Only </label>
-                  <input type='checkbox'/>
+                  <input type='checkbox' checked={isChecked} onChange={handleCheckboxChange}/>
                 </div>
             </div>
             <div className='menu-items my-5 py-10 lg:grid lg:grid-cols-4'>

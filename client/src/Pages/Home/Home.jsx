@@ -27,8 +27,8 @@ const Home = () => {
       </nav>
       <hr className='my-5'/>
       {/* shops*/}
-      <div className='md:flex mb-20 pt-[25px] md:space-y-0 space-y-10 justify-between'>
-          <Link type='button' to='/ShopMenu' className='shop-card md:max-w-[18vw] px-3 pt-5 pb-10 hover:shadow-lg'>
+      <div className='md:flex mb-20 pt-[25px] md:space-y-0 space-y-10 md:justify-between'>
+          <Link type='button' to='/ShopMenu' className='shop-card md:max-w-[18vw] w-[75vw] px-3 pt-5 pb-10 hover:shadow-lg'>
               <div>
                 <img src={card} className='w-full' alt='shopimg'/>
                 <p className='shop-name text-black text-[14px] mt-4 mb-2 font-medium' id='shop-name'>Butty Food Corner</p>
