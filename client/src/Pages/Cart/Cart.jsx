@@ -6,9 +6,9 @@ import img from './assets/img.svg'
 
 const Cart = () => {
   return (
-    <div className='text-center items-center justify-center mt-[13vh] mb-[25vh]'>
+    <div className='text-center bg-white items-center justify-center h-screen pt-[13vh] pb-[25vh]'>
       <div>
-        <img src={img} className='mx-auto' />
+        <img src={img} className='mx-auto' alt='emptycart'/>
       </div>
       <h4 className='text-[18px] my-2 font-medium'>Your Cart is empty</h4>
       <p className='text-[#727070] text-[13px] mb-10'>You can go to the home page to view more Restaurants</p>

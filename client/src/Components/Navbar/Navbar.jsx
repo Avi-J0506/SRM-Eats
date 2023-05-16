@@ -4,6 +4,7 @@ import './Navbar.module.css'
 import { Transition } from "@headlessui/react";
 import logo from './assets/Group 1.svg'
 import cart from './assets/material-symbols_shopping-cart-outline.svg'
+import location from './assets/locationico.svg'
 import {Turn as Hamburger} from 'hamburger-react'
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -11,20 +12,26 @@ export const  Navbar=(props)=> {
   const [isOpen, setOpen] = useState(false);
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
   return (
-      <nav className="bg-[#242424] sticky">
-        <div className="max-w-8xl mx-auto py-5 px-5 sm:px-6 md:pl-10">
-          <div className="flex items-center justify-between h-10">
+      <nav className="bg-[#242424] sticky border-y border-t-0 border-[#FA144B]">
+        <div className="max-w-[98vw] mx-auto py-5 px-5 sm:px-6 md:pl-10">
+          <div className="flex items-center justify-between h-14">
             <div className="flex items-center">
-              <Link to='/' className="flex-shrink-0">
+              <Link to='/' className="">
                 <img
-                  className="w-20 h-20"
+                  className="md:w-[9vw] w-[20vw]"
                   src={logo}
+                  alt='logo'
                 />
               </Link>
-              {/* write condition for selected dropdown value */}
-              <div className="mx-7 text-white">
-               {}
-              </div>
+              {/*condition for selected dropdown value */}
+              {
+                props.selectedValue &&
+                  <div className="mx-7 flex space-x-2 text-white">
+                    <img src={location} alt='location'/>
+                    <p>{props.selectedValue}</p>
+                  </div>
+              }
+              
               {/* // */}
               <div className="hidden md:block absolute right-0 mr-10">
                 <div className="ml-10 flex items-baseline space-x-4">
@@ -38,7 +45,7 @@ export const  Navbar=(props)=> {
                     {props.state && 
                     <Link to="/Cart" className="text-white">
                       <div className="flex space-x-2">
-                        <img src={cart}/>
+                        <img src={cart} alt='cart'/>
                         <span>Cart</span>
                       </div>
                     </Link>}
@@ -53,7 +60,7 @@ export const  Navbar=(props)=> {
             {
               props.state && 
               <Link to='/Cart'>
-              <img src={cart} className='md:hidden block'/>
+              <img src={cart} className='md:hidden block' alt="cart" />
               </Link>
             }
           </div>
